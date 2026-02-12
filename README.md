@@ -58,6 +58,11 @@ If you press any key, the system displays:
 Key Pressed: <key-name>
 
 --- 
+
 ## Screenshot
 
-<img src="https://github.com/sansar20174/Me/blob/main/Screenshogt.png"
+<img width="1910" height="2534" alt="Screenshogt" src="https://github.com/sansar20174/Me/blob/main/Screenshogt.png" />
+
+---
+
+<img width="1910" height="2534" alt="Smart Event Managment 02" src="https://github.com/sansar20174/Me/blob/main/Smart%20Event%20Managment%2002.png" />
