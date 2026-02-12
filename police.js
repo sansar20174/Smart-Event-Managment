@@ -14,7 +14,7 @@ function createEventCard(title, date, description, category){
     <p><strong>Date:</strong> ${date}</p>
     <p><strong>Description:</strong> ${description}</p>
     <p><strong>Category:</strong> ${category}</p>
-    <button class="delete-btn">Delete</button>
+    <button class="delete-btn">X</button>
     `;
     eventCard.querySelector(".delete-btn").addEventListener("click",()=>{
       eventCard.remove();
@@ -52,21 +52,24 @@ form.addEventListener("submit",function(event){
 
    const sampleeventData=[
     {
-      eventtitle: "Music Concert",
-      eventdate: "2024-07-15",
-      eventdescription: "An evening of live music performances.",
-      eventcategory: "Entertainment",
+      eventtitle: "Wedding Ceremony",
+      eventdate: "10-02-2026",
+      eventdescription: "An elegant wedding ceremony with close family and friends in Railway Colony at Punjabi Bagh.",
+      eventcategory: "Social",
     },
     {
-      eventtitle: "Tech Conference",
-      eventdate: "2024-08-20",
-      eventdescription: "A conference showcasing the latest in technology.",
-      eventcategory: "Education",
+      eventtitle: "Reception Party",
+      eventdate: "12-02-2026",
+      eventdescription: "A grand reception party to celebrate the newlyweds with music, dance, and delicious food at Karan Vatika.",
+      eventcategory: "Social",
     },
   ];
 
   sampleeventData.forEach((item)=>{
     createEventCard(item.eventtitle, item.eventdate, item.eventdescription, item.eventcategory);
   });
-  if (domOutput) domOutput.textContent = "Event loaded!";
   });
+document.addEventListener("keydown", function(event){
+    document.getElementById("domOutput").textContent =
+        "Key Pressed: " + event.key;
+});

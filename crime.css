@@ -1,0 +1,234 @@
+
+:root{
+    --ink:#1f2937;
+    --muted:#6b7280;
+    --accent:#69b9ff;
+    --accent-dark:#3a8be0;
+    --surface:#ffffff;
+    --surface-soft:#eef7ff;
+    --border:#e5e7eb;
+    --shadow:0 12px 30px rgba(30,64,175,0.12);
+}
+
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Manrope", system-ui, sans-serif;
+}
+
+/* Body Gradient Background */
+body{
+    min-height:100vh;
+    background:
+        radial-gradient(900px 420px at 10% -10%, #7fd9ff 0%, transparent 60%),
+        radial-gradient(700px 360px at 90% 0%, #8fb6ff 0%, transparent 55%),
+        linear-gradient(135deg,#f5f9ff,#cfe8ff,#fdfcff);
+    color:var(--ink);
+    padding:28px;
+}
+
+.container{
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.container > h1{
+    text-align:center;
+    font-size:34px;
+    font-weight:700;
+    margin:12px 0 24px;
+    color:#2f6fe0;
+    letter-spacing:0.2px;
+}
+
+.dashboard{
+    display:grid;
+    grid-template-columns:340px 1fr;
+    gap:24px;
+}
+
+/* Card Style */
+.card{
+    background:var(--surface);
+    padding:22px;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    border:1px solid rgba(47,111,224,0.12);
+}
+
+.card h2{
+    font-size:20px;
+    margin-bottom:12px;
+}
+
+.card.wide{
+    background:var(--surface);
+}
+
+/* Form */
+label{
+    display:block;
+    margin-top:12px;
+    font-size:14px;
+    color:var(--muted);
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:10px 12px;
+    margin-top:6px;
+    border-radius:10px;
+    border:1px solid var(--border);
+    font-size:14px;
+    background:#fff;
+    color:var(--ink);
+    transition:border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    outline:none;
+    border-color:#93c5fd;
+    box-shadow:0 0 0 3px rgba(147,197,253,0.5);
+}
+
+textarea{
+    min-height:90px;
+    resize:none;
+}
+
+/* Buttons */
+button{
+    border:none;
+    cursor:pointer;
+    font-weight:600;
+    border-radius:10px;
+    transition:transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.btn{
+    width:100%;
+    margin-top:16px;
+    padding:12px 14px;
+    background:linear-gradient(90deg,var(--accent),#86b5ff);
+    color:#fff;
+}
+
+.btn:hover{
+    transform:translateY(-1px);
+    box-shadow:0 8px 18px rgba(58,139,224,0.25);
+}
+
+.header-flex{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    margin-bottom:14px;
+}
+
+.btn-group{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.btn.secondary{
+    width:auto;
+    background:linear-gradient(90deg,#7bb6ff,#60a5fa);
+    padding:10px 14px;
+}
+
+.btn.danger{
+    width:auto;
+    background:linear-gradient(90deg,#5fa9ff,#3b82f6);
+    padding:10px 14px;
+}
+
+/* Event List */
+.event-list{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.event-card{
+    background:var(--surface-soft);
+    border:1px solid #dbeafe;
+    border-radius:14px;
+    padding:16px;
+    position:relative;
+}
+
+.event-card h3{
+    font-size:18px;
+    margin-bottom:6px;
+}
+
+.event-card p{
+    color:var(--muted);
+    font-size:14px;
+    margin:6px 0;
+}
+
+.event-card strong{
+    color:var(--ink);
+}
+
+.delete-btn{
+    position:absolute;
+    top:10px;
+    right:10px;
+    background:#60a5fa;
+    color:#fff;
+    padding:8px 12px;
+    border-radius:25%;
+}
+
+.delete-btn:hover{
+    background:#2563eb;
+}
+
+/* Responsive */
+@media(max-width:960px){
+    .dashboard{
+        grid-template-columns:1fr;
+    }
+
+    .btn-group{
+        width:100%;
+        justify-content:flex-start;
+    }
+}
+
+.dom-card{
+    margin:24px;
+    background:linear-gradient(135deg,#f5f9ff,#cfe8ff);
+    padding:20px 24px;
+    border-radius:18px;
+    box-shadow:0 12px 30px rgba(30,64,175,0.1);
+}
+.dom-heading{
+    font-size:18px;
+    margin-bottom:12px;
+    color:#2f6fe0;
+}
+
+#domOutput{
+    width:100%;
+    max-width:560px;
+    text-align:left;
+    background:#f0f7ff;
+    padding:16px 20px;
+    border-radius:12px;
+    border:1px solid #93c5fd;
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size:15px;
+    color:#1d4ed8;
+    margin-top:12px;
+}
