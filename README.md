@@ -4,7 +4,7 @@ A simple front-end project to add, view, and manage events in the browser. It in
 
 ---
 
-##📌 Features=
+## 📌 Features=
 - ✅ Add New Event (Title, Date, Category, Description)
 - ✅ Display Events in a stylish card format
 - ✅ Delete individual events using the X button
