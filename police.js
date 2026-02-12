@@ -44,7 +44,7 @@ form.addEventListener("submit",function(event){
   });
 
   clearBtn.addEventListener("click", function(){
-    eventlist.innerHTML = "";
+    eventlist.innerHTML = "Clearing all events...";
     if (domOutput) domOutput.textContent = "All events cleared!"
   });
 
@@ -68,6 +68,7 @@ form.addEventListener("submit",function(event){
   sampleeventData.forEach((item)=>{
     createEventCard(item.eventtitle, item.eventdate, item.eventdescription, item.eventcategory);
   });
+  if (domOutput) domOutput.textContent = "Sample events added successfully!";
   });
 document.addEventListener("keydown", function(event){
     document.getElementById("domOutput").textContent =
